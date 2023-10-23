@@ -69,6 +69,7 @@ public class BoardRestController {
 		//2. 기능실행
 		ArrayList<Board>list = boardMapper.chart();
 		
+		System.out.println(list);
 		//3. 데이터 응답
 		return list;
 		
