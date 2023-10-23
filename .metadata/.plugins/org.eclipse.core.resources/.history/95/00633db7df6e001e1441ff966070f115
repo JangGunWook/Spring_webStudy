@@ -1,0 +1,18 @@
+/**
+ * 
+ */
+
+const btn =$("btn");
+
+btn.on("click",loadData);
+
+const loadData =async()=>{
+	await $.ajax({
+		url:'load',
+		type :"get",
+		success : function(res){
+			console.log(res)
+		}
+	})
+}
+

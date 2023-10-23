@@ -1,0 +1,22 @@
+package com.smhrd.web;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.smhrd.mapper.BoardMapper;
+
+@RestController
+public class BoardRestController {
+	
+	@Autowired
+	private BoardMapper boardMapper;
+	
+	@GetMapping("/count")
+	public String count(int idx) {
+		
+		boardMapper.
+	}
+	
+
+}

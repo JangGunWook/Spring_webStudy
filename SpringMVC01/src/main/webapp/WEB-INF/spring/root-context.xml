@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:mybatis="http://mybatis.org/schema/mybatis-spring"
+  xsi:schemaLocation="
+  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+		
+	<!-- Board board = new Board() -->
+	<!-- Bean : Spring시작시 메모리상에 올려져 있는 자바객체 -->
+	<bean id="board" class="com.smhrd.entity.Board">
+		<!-- board.setTitle("자바 빈 만들기") -->
+		<property name="title" value="자바 빈 만들기"></property>
+	</bean>
+	
+	<!-- DBCP을 생성하기 위한 bean 정의하기 -->
+	<!-- 1. DB연결에 필요한 정보를 담을 객체 생성 -->
+	<bean id="config" class="com.zaxxer.hikari.HikariConfig">
+		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property>
+		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/com"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="123456"></property>
+	</bean>	
+	
+	<!-- 2. DBCP 생성 -->
+	<bean id="datasource" class="com.zaxxer.hikari.HikariDataSource">
+		<constructor-arg ref="config"></constructor-arg>
+	</bean>
+	
+	<!-- 3. Mybatis의 SqlSessionFactoryBean 생성 -->
+	<bean id="" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="datasource"></property>
+	</bean>
+	
+	<!-- 4. Mapper들이 들어있는 패키지를 scan -->
+	<mybatis:scan base-package="com.smhrd.mapper"/>
+	
+</beans>

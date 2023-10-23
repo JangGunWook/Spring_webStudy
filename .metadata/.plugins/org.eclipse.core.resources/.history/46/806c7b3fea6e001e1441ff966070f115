@@ -1,0 +1,37 @@
+
+	// id값과 함수명과는 겹치면 안된다
+	
+	const boardSearch=async()=>{
+		
+		// 검색어 변수명
+		const search = $("#search").val()
+		
+		// 1) input태그에 작성된 내용을 가지고, 비동기 요청
+			await $.ajax({
+				url : "search",
+				type : "get",
+				data : {
+					"search" : search	
+				},
+			success : update,
+			
+			erro:function(e){
+				console.log(e)
+			}})
+			};
+			
+			
+		// 2) 파라미터 수집, 해당 검색어를 포함하는 게시글만을 조회해서 결과를 응답
+
+		// 3) 테이블 내용 수정
+	
+
+	function update(res){
+		console.log(res)
+	}
+
+
+// 1. 검색버튼 클릭시
+	const searchBtn = $("#searchBtn");
+	serchBtn.on("click",boardSearch)
+	

@@ -1,0 +1,38 @@
+package com.smhrd.web;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.smhrd.entity.Board;
+import com.smhrd.mapper.BoardMapper;
+
+@RestController
+public class BoardRestController {
+	
+	@Autowired
+	private BoardMapper boardMapper;
+	
+	
+	@GetMapping("/count")
+	public @ResponseBody Board count(int idx, int count) {
+		
+		Board board = null;
+		try {//Entity에 @Builder를 통해서 setter를 대신한다.
+			board = Board.builder().idx(idx).count(count).build();
+			
+			
+			System.out.println(board);
+			
+			int cnt= boardMapper.count(board);
+			System.out.println(cnt);
+			return board;
+		} catch (Exception e) {
+			System.out.println(e);
+			return board;
+		}
+	}
+	
+
+}

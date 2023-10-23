@@ -1,0 +1,20 @@
+package com.smhrd.web;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@Controller
+public class AjaxRestController {
+
+	@RequestMapping("/ajax01")
+	public @ResponseBody String ajax01() {
+		
+		System.out.println("요청이 들어옴");
+		// @ResponseBody 어노테이션을 붙이면
+		// 리턴한 문자열을 그대로 응답
+		
+		return "ajax01";
+	}
+}

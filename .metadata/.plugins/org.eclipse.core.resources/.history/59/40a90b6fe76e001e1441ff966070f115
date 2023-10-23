@@ -1,0 +1,51 @@
+package com.smhrd.web;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.smhrd.entity.Board;
+import com.smhrd.mapper.BoardMapper;
+
+import lombok.extern.slf4j.Slf4j;
+
+@RestController
+@Slf4j
+public class BoardRestController {
+	
+	@Autowired
+	private BoardMapper boardMapper;
+	
+	
+	@GetMapping("/count")
+	public Board count(int idx, int count) {
+		
+		Board board = null;
+		try {//Entity에 @Builder를 통해서 setter를 대신한다.
+			board = Board.builder().idx(idx).count(count).build();
+			
+			log.info(board.toString());
+			log.info(board.getContent());
+			
+			int cnt= boardMapper.count(board);
+			log.info(String.valueOf(cnt));
+			return board;
+		} catch (Exception e) {
+			System.out.println(e);
+			return board;
+		}
+	}
+	
+	@GetMapping("/search")
+	public @RequestBody String search(String search) {
+		// 1. 파리미터 수집
+		// 2. 기능 실행
+		
+		
+		return
+	}
+
+}
