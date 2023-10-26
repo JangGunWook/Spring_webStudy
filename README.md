@@ -39,3 +39,8 @@
 2. JPA 활용 : Entity객체와 JPA인터페이스를 통한 MYSQL활용법 
 <br>
 ※ JPA는 주로 쿼리문을 사용하지 않음으로 Mybatis와 주로 함께 사용
+
+
+![image](https://github.com/JangGunWook/Spring_webStudy/assets/119468128/b7adfc69-cba2-4224-8aad-a2ae053f4552)
+![image](https://github.com/JangGunWook/Spring_webStudy/assets/119468128/1d2665dc-5b7a-4a03-9cb1-55eb8744f1d3)
+
