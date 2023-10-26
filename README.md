@@ -1,7 +1,10 @@
 # Spring_webStudy
 
-## 📅 학습 기간
-2022.10.12 ~ 2022.10.25 (2주)
+## 📅 기본환경
+* 학습기간 : 2022.10.12 ~ 2022.10.25 (2주)
+* 프레임워크 : Spring, Spring-boot
+* 서버 : tomcat
+* DB : MYSQL, Mybatis, JPA
 <br>
 
 ## 📎 Spring - 정부프레임워크(4.0)
@@ -26,13 +29,13 @@
 * 검색기능(제목): 게시글 제목을 통한 검색기능
 * 조회수 상위5등 차트 : chart.js를 이요한 BarChart구현
 
-
+## 📌 비동기 통신 학습
+* Ajax를 통한 비동기 통신 학습
 
 ## ⭐ 추가 학습 사항(Spring Boot)
 
 1. Application.properties 설정
 <br> <img src="https://github.com/JangGunWook/Spring_webStudy/assets/119468128/c521bf44-3155-4dd5-a433-90a2e1b228cc" width="200" height="200"><br>
-  
-3. Main Page : 전체 회원과 트레이너의 Privacy Info확인 가능
-4. Diet Page :  금일 식사의 영영정보 및 calorie 섭취량 시각화 자료를 통해 확인 가능
-5. Exercise Page : 금일, 주별 운동별 calorie소모량을 시각화 자료를 통해 확인 가능
+2. JPA 활용 : Entity객체와 JPA인터페이스를 통한 MYSQL활용법 
+<br>
+※ JPA는 주로 쿼리문을 사용하지 않음으로 Mybatis와 주로 함께 사용
