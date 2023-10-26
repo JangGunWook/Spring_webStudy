@@ -9,13 +9,13 @@
  환경 기본설정
   * Pom.xml 설정
     - Maven Repository
-      1. MYsql - connector
-      2. 스프링JDBC
-      3. mybatis/mybatis-spring
-      4. HikariCP
-      5. lombok
-      6. gson
-      7. jackson 
+      * MYsql - connector
+      * 스프링JDBC
+      * mybatis/mybatis-spring
+      * HikariCP
+      * lombok
+      * gson
+      * jackson 
   
     - spring/root-context.xml 설정
   <img src="https://github.com/JangGunWook/Spring_webStudy/assets/119468128/c521bf44-3155-4dd5-a433-90a2e1b228cc" width="200" height="200">
